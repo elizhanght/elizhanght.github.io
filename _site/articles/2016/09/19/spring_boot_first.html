@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="How to set the config.yml file">
-<title>How to set the config.yml file</title>
-<meta property="og:description" content="The config.yml file in the Freshman21 theme includes five parts.First part is the site info.title: Freshman21 # blog titletagline: Another Jekyll theme, Fres...">
-<meta property="og:url" content="http://houshuai.github.io/articles/howto/2014/12/19/how-to-set-the-config-file.html">
+<meta property="og:title" content="Spring Boot First">
+<title>Spring Boot First</title>
+<meta property="og:description" content="1. 基本信息  Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。2. 新建项目  首先在 Eclipse 中新建 MAVEN 工程,在 pom.xml 添加如下内容。&lt;parent&gt;	&lt;groupId...">
+<meta property="og:url" content="http://houshuai.github.io/articles/2016/09/19/spring_boot_first.html">
 <meta property="og:site_name" content="心碎乌托邦的博客">
 <meta property="og:locale" content="zh-cn">
 <meta name="twitter:card" content="summary">
 <!--<meta name="twitter:site" content="@">-->
 <!--<meta name="twitter:creator" content="@">-->
-<meta name="twitter:title" content="How to set the config.yml file">
-<meta name="twitter:description" content="The config.yml file in the Freshman21 theme includes five parts.First part is the site info.title: Freshman21 # blog titletagline: Another Jekyll theme, Fres...">
-<meta name="twitter:url" content="http://houshuai.github.io/articles/howto/2014/12/19/how-to-set-the-config-file.html">
+<meta name="twitter:title" content="Spring Boot First">
+<meta name="twitter:description" content="1. 基本信息  Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。2. 新建项目  首先在 Eclipse 中新建 MAVEN 工程,在 pom.xml 添加如下内容。&lt;parent&gt;	&lt;groupId...">
+<meta name="twitter:url" content="http://houshuai.github.io/articles/2016/09/19/spring_boot_first.html">
 
 <meta name="keywords" content="心碎乌托邦">
 
 <link rel="icon" href="/elizhanght.github.io/images/20140909195808_4TtP8.jpeg">
 <link rel="stylesheet" href="/elizhanght.github.io/css/main.css">
-<link rel="canonical" href="http://houshuai.github.io/articles/howto/2014/12/19/how-to-set-the-config-file.html">
+<link rel="canonical" href="http://houshuai.github.io/articles/2016/09/19/spring_boot_first.html">
 <link rel="alternate" type="application/atom+xml" title="心碎乌托邦的博客" href="http://houshuai.github.io/feed.xml" />
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -102,100 +102,111 @@
     <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name" class="post-title">How to set the config.yml file</h1>
-    <meta itemprop="keywords" content="configure" />
+    <h1 itemprop="name" class="post-title">Spring Boot First</h1>
+    <meta itemprop="keywords" content="version,new features,google analytics,google search,back to top,read more" />
     <p class="post-meta">
     目录:
     
-    <a href="/elizhanght.github.io/categories/#articles">articles</a>, 
-    
-    <a href="/elizhanght.github.io/categories/#Howto">Howto</a>
+    <a href="/elizhanght.github.io/categories/#articles">articles</a>
      
     
     | 标签:
     
-    <a href="/elizhanght.github.io/tags/#configure" title="configure">configure</a>
+    <a href="/elizhanght.github.io/tags/#version" title="version">version</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#new features" title="new features">new features</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#google analytics" title="google analytics">google analytics</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#google search" title="google search">google search</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#back to top" title="back to top">back to top</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#read more" title="read more">read more</a>
     
     
-    <time itemprop="datePublished" datetime="2014-12-19">
-    | 发表时间: Dec 19, 2014
+    <time itemprop="datePublished" datetime="2016-09-19">
+    | 发表时间: Sep 19, 2016
     </time>
     </p>
   </header>
 
   <article class="post-content" itemprop="articleBody">
-    <p>The <a href="https://github.com/yulijia/freshman21/blob/master/_config.yml">config.yml file</a> in the Freshman21 theme includes five parts.</p>
+    <h2 id="section">1. 基本信息</h2>
 
-<p><strong>First part</strong> is the site info.</p>
+<blockquote>
+  <p>Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。</p>
+</blockquote>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">title</span><span class="pi">:</span> <span class="s">Freshman21</span> <span class="c1"># blog title</span>
-<span class="s">tagline</span><span class="pi">:</span> <span class="s">Another Jekyll theme, Freshman twenty-first</span> <span class="c1"># blog sub-titile</span>
-<span class="s">author</span><span class="pi">:</span> <span class="s">Lijia YU</span> <span class="c1"># author name</span>
-<span class="s">email</span><span class="pi">:</span> <span class="s">yu@lijiayu.net</span> <span class="c1"># author email</span>
-<span class="s">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Freshman21</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">theme."</span> <span class="c1"># You can edit this line in _config.yml. It will appear in your document head meta and in </span>
-<span class="s">your feed.xml site description</span>
-<span class="s">keywords</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll,</span><span class="nv"> </span><span class="s">theme,</span><span class="nv"> </span><span class="s">Freshman21"</span> <span class="c1"># html meta keywords</span>
-<span class="s">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/freshman21"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
-<span class="s">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://yulijia.net/freshman21"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+<h2 id="section-1">2. 新建项目</h2>
+
+<blockquote>
+  <p>首先在 Eclipse 中新建 MAVEN 工程,在 pom.xml 添加如下内容。</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;parent&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+	&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;
+&lt;/parent&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+</div>
+<blockquote>
+  <p>新建工程 MyBatisController.java，代码如下：</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>package controller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springboot.mybatis.mapper.UserMapper;
+
+@RestController
+@EnableAutoConfiguration
+public class MyBatisController {
+	
+	@RequestMapping("/")
+	@ResponseBody
+	String home(){
+		return "Hello World";
+	}
+}
+</code></pre>
+</div>
+<blockquote>
+  <p>新建Application.java 类，代码如下，启动工程，在浏览器地址栏输入 http://localhost:8080</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import controller.MyBatisController;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MyBatisController.class, args);
+	}
+}
 </code></pre>
 </div>
 
-<p><strong>Part 2</strong>, Personal info and site tools info, twitter, github, aboutme and aboutme_photo only appears on the sidebar aboutme-box, you can <q>Hide</q> in two ways <sup><a href="#[1]">[1]</a></sup>:</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">twitter_username</span><span class="pi">:</span> <span class="c1">#your twitter handle  </span>
-<span class="s">github_username</span><span class="pi">:</span>  <span class="c1">#your github account</span>
-<span class="s">disqus_shortname</span><span class="pi">:</span> <span class="c1">#disqus shortname</span>
-<span class="s">favicon</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">images/favicon.ico"</span>
-<span class="s">aboutme</span><span class="pi">:</span> <span class="s">Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it.</span> <span class="c1"># these are shown on aboutme-box(sidebar).</span>
-<span class="s">aboutme_photo</span><span class="pi">:</span> <span class="s">https://i.imgur.com/15BT1.jpg</span> <span class="c1"># your personal photo.</span>
-</code></pre>
-</div>
-
-<p><strong>Part3</strong>, Site setting:</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">ShowContactInfo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True"</span> <span class="c1"># Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True</span>
-<span class="s">default_column</span><span class="pi">:</span> <span class="s2">"</span><span class="s">two"</span> <span class="c1"># blog style: two columns, if default_column != "two", you will see a one column blog.</span>
-<span class="s">default_locale</span><span class="pi">:</span> <span class="s2">"</span><span class="s">en"</span> <span class="c1"># blog sidebar language set, only include: English(en) and Chinese (cn)</span>
-</code></pre>
-</div>
-
-<p><strong>Part4</strong>, Blogroll info, only <em>name</em> tags can shown on the page.</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">Blogroll</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">Freshman</span>
-        <span class="s">href</span><span class="pi">:</span> <span class="s">http://yulijia.net/freshman</span>
-        <span class="s">title</span><span class="pi">:</span> <span class="s">Another Jekyll blog theme</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">author's website</span>
-        <span class="s">href</span><span class="pi">:</span> <span class="s">http://yulijia.net/</span>
-        <span class="s">title</span><span class="pi">:</span> <span class="s">Lijia Yu's website</span>
-</code></pre>
-</div>
-
-<p><strong>Part5</strong>, Build settings</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
-<span class="s">highlighter</span><span class="pi">:</span> <span class="s">pygments</span> <span class="c1"># highlight</span>
-<span class="s">paginate</span><span class="pi">:</span> <span class="s">5</span>  <span class="c1"># how many post can seen in the main page</span>
-</code></pre>
-</div>
-
-<p>=====</p>
-
-<ul style="list-style-type:none;"> 
-<li id="[1]"> [1], you can set those info at <strong>Part3</strong> or just delete the <q>aboutme.html</q> at <q>sidebar.html</q> in <code>_include</code> folder. </li>
-</ul>
-
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-2"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!--{ % include Aboutme.html % }--&gt;</span>
-   { % include Copyright_Notice.html % }
-   { % include Recent_Posts.html % }
-   { % include Categories.html % }
-   { % include Tags.html % }
-   { % include Blogroll.html % }
-   { % include Archives.html % }
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
-</div>
+<blockquote>
+  <p>使用 Maven 启动工程，在指定地方输入 spring-boot:run 即可。</p>
+</blockquote>
 
 
   </article>
@@ -206,10 +217,10 @@
 <section class="pager">
   <ul>
     
-    <li class="previous"><a href="/elizhanght.github.io/articles/howto/2014/12/19/freshman21-structure.html" title="Theme structure">&larr; 前一页</a></li>
+    <li class="previous"><a href="/elizhanght.github.io/news/2015/03/31/2.0version.html" title="2.0 version">&larr; 前一页</a></li>
     
     
-    <li class="next"><a href="/elizhanght.github.io/news/2015/03/31/2.0version.html" title="2.0 version">后一页 &rarr;</a></li>
+    <li class="disabled"><a>后一页 &rarr;</a>
     
   </ul>
 </section>

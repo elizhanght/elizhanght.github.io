@@ -5,22 +5,16 @@
     <description>Freshman21 is a Jekyll blog theme.</description>
     <link>http://houshuai.github.io/</link>
     <atom:link href="http://houshuai.github.io/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Sep 2016 19:15:05 +0800</pubDate>
-    <lastBuildDate>Mon, 19 Sep 2016 19:15:05 +0800</lastBuildDate>
+    <pubDate>Mon, 19 Sep 2016 23:54:23 +0800</pubDate>
+    <lastBuildDate>Mon, 19 Sep 2016 23:54:23 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>Spring_boot_first</title>
-        <description>
-&lt;hr /&gt;
-&lt;p&gt;layout: single 
-title:spring boot
-—&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;1. 基本信息&lt;/h2&gt;
+        <title>Spring Boot First</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;1. 基本信息&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。&amp;lt;/br&amp;gt;&lt;/p&gt;
+  &lt;p&gt;Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;2. 新建项目&lt;/h2&gt;
@@ -95,9 +89,23 @@ public class Application {
 
 </description>
         <pubDate>Mon, 19 Sep 2016 00:00:00 +0800</pubDate>
-        <link>http://houshuai.github.io/2016/09/19/spring_boot_first.html</link>
-        <guid isPermaLink="true">http://houshuai.github.io/2016/09/19/spring_boot_first.html</guid>
+        <link>http://houshuai.github.io/articles/2016/09/19/spring_boot_first.html</link>
+        <guid isPermaLink="true">http://houshuai.github.io/articles/2016/09/19/spring_boot_first.html</guid>
         
+        <category>version</category>
+        
+        <category>new features</category>
+        
+        <category>google analytics</category>
+        
+        <category>google search</category>
+        
+        <category>back to top</category>
+        
+        <category>read more</category>
+        
+        
+        <category>articles</category>
         
       </item>
     
@@ -565,20 +573,17 @@ This species is listed as Extinct in the Wild, as all populations are still unde
 
 &lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;#container {
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;highlight-with-line-number&quot;&gt;highlight with line number.&lt;/h4&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def foo
+  puts &amp;#39;foo&amp;#39;
+end&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/h4&gt;
 
