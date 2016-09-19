@@ -4,7 +4,7 @@ title: Spring Boot First
 layout: post
 author: Eli ZHANG 
 category: articles
-tags: spring boot
+tags:
 - version
 - new features
 - google analytics
