@@ -4,7 +4,7 @@ tagline: 心碎乌托邦
 author: ELI ZHANG
 email: 229828946@163.com
 description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-keywords: "Jekyll, theme, Freshman21"
+keywords: "心碎乌托邦"
 baseurl: "/elizhanght.github.io" # the subpath of your site, e.g. /blog/
 url: "http://houshuai.github.io" # the base hostname & protocol for your site
 locale: zh-cn
@@ -13,7 +13,7 @@ locale: zh-cn
 github_username:  elizhanght
 favicon:     "/images/20140909195808_4TtP8.jpeg"
 aboutme: 技术积累、知识积累 # these are shown on aboutme-sidebar.
-aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
+aboutme_photo: /images/20140909195808_4TtP8.jpeg# your photo.
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
 
