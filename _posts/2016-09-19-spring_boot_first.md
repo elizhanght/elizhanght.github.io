@@ -1,9 +1,9 @@
 ---
 published: true
-title: 2.0 version
+title: Spring Boot
 layout: post
-author: Yu 
-category: news
+author: Eli ZHANG 
+category: articles
 tags:
 - version
 - new features
