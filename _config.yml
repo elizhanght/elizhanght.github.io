@@ -6,8 +6,8 @@ email: 229828946@163.com
 description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "Jekyll, theme, Freshman21"
 baseurl: "/elizhanght.github.io" # the subpath of your site, e.g. /blog/
-url: "http://yulijia.net/freshman21" # the base hostname & protocol for your site
-locale: en_US
+url: "http://houshuai.github.io" # the base hostname & protocol for your site
+locale: zh_CN
 
 ### Personal info and site tools info:
 twitter_username: yulijia
