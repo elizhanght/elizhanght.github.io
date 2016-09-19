@@ -1,10 +1,10 @@
 ---
 published: true
-title: Spring Boot
+title: Spring Boot First
 layout: post
 author: Eli ZHANG 
 category: articles
-tags:
+tags: spring boot
 - version
 - new features
 - google analytics
