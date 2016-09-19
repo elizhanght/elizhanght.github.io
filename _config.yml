@@ -10,9 +10,7 @@ url: "http://houshuai.github.io" # the base hostname & protocol for your site
 locale: zh-cn
 
 ### Personal info and site tools info:
-twitter_username: yulijia
-github_username:  yulijia
-disqus_shortname: freshman21
+github_username:  houshuai
 favicon:     "/images/favicon.ico"
 aboutme: 技术积累、只是积累 # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
