@@ -10,7 +10,7 @@ url: "http://houshuai.github.io" # the base hostname & protocol for your site
 locale: zh-cn
 
 ### Personal info and site tools info:
-github_username:  houshuai
+github_username:  elizhanght
 favicon:     "/images/favicon.ico"
 aboutme: 技术积累、只是积累 # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg# your photo.
@@ -23,24 +23,6 @@ default_column: "two" # blog style: two columns, if default_column != "two", you
 default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr) and Russian (ru) 
 
 locales:
-    en:
-      Aboutme: "About Me"
-      Archives: "Archives"
-      Blogroll: "Blogroll"
-      Categories: "Categories"
-      Copyright_Notice: "Copyright Notice"
-      Recent_Posts: "Recent Posts"
-      Tags: "Tags"
-      Previous: "Older"
-      Next: "Newer"
-      PostedInCategories: "Posted in"
-      Taggedwith: "and tagged"
-      PostDate: "on "
-      Google_search: "Site Search"
-      Home: "Home"
-      About: "About"
-      Guestbook: "Guestbook"
-      Subscribe: "Subscribe"
     cn:
       Aboutme: "关于我"
       Archives: "存档"
@@ -59,6 +41,24 @@ locales:
       About: "关于"
       Guestbook: "留言"
       Subscribe: "订阅"
+    en:
+      Aboutme: "About Me"
+      Archives: "Archives"
+      Blogroll: "Blogroll"
+      Categories: "Categories"
+      Copyright_Notice: "Copyright Notice"
+      Recent_Posts: "Recent Posts"
+      Tags: "Tags"
+      Previous: "Older"
+      Next: "Newer"
+      PostedInCategories: "Posted in"
+      Taggedwith: "and tagged"
+      PostDate: "on "
+      Google_search: "Site Search"
+      Home: "Home"
+      About: "About"
+      Guestbook: "Guestbook"
+      Subscribe: "Subscribe"
     jp:
       Aboutme: "著者"
       Archives: "アーカイブ"
