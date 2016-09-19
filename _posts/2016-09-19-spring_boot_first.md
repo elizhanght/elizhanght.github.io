@@ -1,11 +1,5 @@
 ## 1. 基本信息
 
-```
---- 
-layout: single 
-title: Git manual 
----
-```
 >Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。</br>
 
 ## 2. 新建项目
