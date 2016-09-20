@@ -9,7 +9,7 @@
 
 <meta property="og:title" content="Redis Cluster 添加从节点">
 <title>Redis Cluster 添加从节点</title>
-<meta property="og:description" content="Redis Cluster 添加从节点  从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。  新建 30004 文件夹，然后新建 redis.conf文件，文件内容如下:port 30004cluster-enabled yescl...">
+<meta property="og:description" content="Redis Cluster slave配置  从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。  新建 30004 文件夹，然后新建 redis.conf文件，文件内容如下:port 30004cluster-enabled yes...">
 <meta property="og:url" content="http://houshuai.github.io/articles/2016/09/20/Redis-Cluster-Slave.html">
 <meta property="og:site_name" content="心碎乌托邦的博客">
 <meta property="og:locale" content="zh-cn">
@@ -17,7 +17,7 @@
 <!--<meta name="twitter:site" content="@">-->
 <!--<meta name="twitter:creator" content="@">-->
 <meta name="twitter:title" content="Redis Cluster 添加从节点">
-<meta name="twitter:description" content="Redis Cluster 添加从节点  从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。  新建 30004 文件夹，然后新建 redis.conf文件，文件内容如下:port 30004cluster-enabled yescl...">
+<meta name="twitter:description" content="Redis Cluster slave配置  从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。  新建 30004 文件夹，然后新建 redis.conf文件，文件内容如下:port 30004cluster-enabled yes...">
 <meta name="twitter:url" content="http://houshuai.github.io/articles/2016/09/20/Redis-Cluster-Slave.html">
 
 <meta name="keywords" content="心碎乌托邦">
@@ -132,7 +132,7 @@
   </header>
 
   <article class="post-content" itemprop="articleBody">
-    <h2 id="redis-cluster-">Redis Cluster 添加从节点</h2>
+    <h3 id="redis-cluster-slave">Redis Cluster slave配置</h3>
 
 <blockquote>
   <p>从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。</p>

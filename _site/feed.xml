@@ -5,8 +5,8 @@
     <description>Freshman21 is a Jekyll blog theme.</description>
     <link>http://houshuai.github.io/</link>
     <atom:link href="http://houshuai.github.io/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Sep 2016 15:04:31 +0800</pubDate>
-    <lastBuildDate>Tue, 20 Sep 2016 15:04:31 +0800</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2016 15:06:04 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2016 15:06:04 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -127,7 +127,7 @@ M: c4628faf0aa4cf8d083733abd9e1c10225d7a731 192.168.1.179:30003
     
       <item>
         <title>Redis Cluster 添加从节点</title>
-        <description>&lt;h2 id=&quot;redis-cluster-&quot;&gt;Redis Cluster 添加从节点&lt;/h2&gt;
+        <description>&lt;h3 id=&quot;redis-cluster-slave&quot;&gt;Redis Cluster slave配置&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;从上篇的文章继续，之前配置了 3 个节点，分别是 30001，30002，30003。然后执行如下命令为 30001 添加从节点。&lt;/p&gt;
