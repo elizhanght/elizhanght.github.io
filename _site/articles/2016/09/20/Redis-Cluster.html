@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="Sample Post">
-<title>Sample Post</title>
-<meta property="og:description" content="Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.">
-<meta property="og:url" content="http://houshuai.github.io/articles/2014/12/13/simple-post.html">
+<meta property="og:title" content="Redis Cluster First">
+<title>Redis Cluster First</title>
+<meta property="og:description" content="Redis 集群搭建准备  下面先搭建一个最简单的 3 个节点的集群，先不为主节点添加从节点，在稍后的文章中会添加从节点。至于Redis如何安装将在后面的文章补充上.  现在的假设我们有 3 个 A,B,C 节点，分别部署一个 Redis 节点。由于测试环境受限影响，现在把 3 个节点都部署到一台服务器上。新建 ...">
+<meta property="og:url" content="http://houshuai.github.io/articles/2016/09/20/Redis-Cluster.html">
 <meta property="og:site_name" content="心碎乌托邦的博客">
 <meta property="og:locale" content="zh-cn">
 <meta name="twitter:card" content="summary">
 <!--<meta name="twitter:site" content="@">-->
 <!--<meta name="twitter:creator" content="@">-->
-<meta name="twitter:title" content="Sample Post">
-<meta name="twitter:description" content="Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.">
-<meta name="twitter:url" content="http://houshuai.github.io/articles/2014/12/13/simple-post.html">
+<meta name="twitter:title" content="Redis Cluster First">
+<meta name="twitter:description" content="Redis 集群搭建准备  下面先搭建一个最简单的 3 个节点的集群，先不为主节点添加从节点，在稍后的文章中会添加从节点。至于Redis如何安装将在后面的文章补充上.  现在的假设我们有 3 个 A,B,C 节点，分别部署一个 Redis 节点。由于测试环境受限影响，现在把 3 个节点都部署到一台服务器上。新建 ...">
+<meta name="twitter:url" content="http://houshuai.github.io/articles/2016/09/20/Redis-Cluster.html">
 
 <meta name="keywords" content="心碎乌托邦">
 
 <link rel="icon" href="/elizhanght.github.io/images/20140909195808_4TtP8.jpeg">
 <link rel="stylesheet" href="/elizhanght.github.io/css/main.css">
-<link rel="canonical" href="http://houshuai.github.io/articles/2014/12/13/simple-post.html">
+<link rel="canonical" href="http://houshuai.github.io/articles/2016/09/20/Redis-Cluster.html">
 <link rel="alternate" type="application/atom+xml" title="心碎乌托邦的博客" href="http://houshuai.github.io/feed.xml" />
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -102,8 +102,8 @@
     <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 itemprop="name" class="post-title">Sample Post</h1>
-    <meta itemprop="keywords" content="sample-post" />
+    <h1 itemprop="name" class="post-title">Redis Cluster First</h1>
+    <meta itemprop="keywords" content="version,new features,google analytics,google search,back to top,read more" />
     <p class="post-meta">
     目录:
     
@@ -112,191 +112,118 @@
     
     | 标签:
     
-    <a href="/elizhanght.github.io/tags/#sample-post" title="sample-post">sample-post</a>
+    <a href="/elizhanght.github.io/tags/#version" title="version">version</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#new features" title="new features">new features</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#google analytics" title="google analytics">google analytics</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#google search" title="google search">google search</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#back to top" title="back to top">back to top</a>, 
+    
+    <a href="/elizhanght.github.io/tags/#read more" title="read more">read more</a>
     
     
-    <time itemprop="datePublished" datetime="2014-12-13">
-    | 发表时间: Dec 13, 2014
+    <time itemprop="datePublished" datetime="2016-09-20">
+    | 发表时间: Sep 20, 2016
     </time>
     </p>
   </header>
 
   <article class="post-content" itemprop="articleBody">
-    <ul id="markdown-toc">
-  <li><a href="#heading" id="markdown-toc-heading">Heading</a></li>
-  <li><a href="#body-text" id="markdown-toc-body-text">Body text</a></li>
-  <li><a href="#blockquotes" id="markdown-toc-blockquotes">Blockquotes</a></li>
-  <li><a href="#list-types" id="markdown-toc-list-types">List Types</a>    <ul>
-      <li><a href="#ordered-lists" id="markdown-toc-ordered-lists">Ordered Lists</a></li>
-      <li><a href="#unordered-lists" id="markdown-toc-unordered-lists">Unordered Lists</a></li>
-    </ul>
-  </li>
-  <li><a href="#tables" id="markdown-toc-tables">Tables</a></li>
-  <li><a href="#code-snippets" id="markdown-toc-code-snippets">Code Snippets</a>    <ul>
-      <li><a href="#highlight-with-line-number" id="markdown-toc-highlight-with-line-number">highlight with line number.</a></li>
-      <li><a href="#highlight-using-triple-backticks" id="markdown-toc-highlight-using-triple-backticks">highlight using triple backticks</a></li>
-    </ul>
-  </li>
-  <li><a href="#latex" id="markdown-toc-latex"><script type="math/tex">\LaTeX</script></a></li>
-  <li><a href="#q-tag" id="markdown-toc-q-tag">&lt;q&gt; tag</a></li>
-</ul>
+    <h2 id="redis-">Redis 集群搭建准备</h2>
 
-<p>This is a sample post.</p>
+<blockquote>
+  <p>下面先搭建一个最简单的 3 个节点的集群，先不为主节点添加从节点，在稍后的文章中会添加从节点。至于Redis如何安装将在后面的文章补充上.</p>
 
-<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
+  <p>现在的假设我们有 3 个 A,B,C 节点，分别部署一个 Redis 节点。由于测试环境受限影响，现在把 3 个节点都部署到一台服务器上。新建 Redis-Cluster 目录，然后新建 3 个文件夹，分别是：</p>
+</blockquote>
 
-<h2 id="heading">Heading</h2>
-
-<pre><code># Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
+<pre><code>mkdir Redis-Cluster
+mkdir 30001 30002 30003
 </code></pre>
 
-<h2 id="body-text">Body text</h2>
-
-<p><strong>This is strong</strong>.</p>
-
-<p>This is figure</p>
-
-<p><img src="https://i.imgur.com/Mdc4szJl.jpg" alt="Elaphurus davidianus" title="Père David's deer" /></p>
-
-<p><em>This is emphasized</em>.</p>
-
-<p>53 = 125. Water is H<sub>2</sub>O.</p>
-
-<p>The New York Times <cite>(That’s a citation)</cite>.</p>
-
-<p><u>Underline</u>.</p>
-
-<p><del>HTML and CSS are our tools</del>.</p>
-
-<h2 id="blockquotes">Blockquotes</h2>
-
 <blockquote>
-  <p>Justification:
-This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.</p>
+  <p>然后在 30001 30002 30003 中分别生成 redis.conf 文件，文件内容分别如下。</p>
 </blockquote>
 
-<blockquote>
-  <p>I follow up the quest. Despite of day and night and death and hell.</p>
-  <center> -- Idylls of the King, Tennyson </center>
-</blockquote>
+<pre><code>port 30001
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
 
-<h2 id="list-types">List Types</h2>
-
-<h3 id="ordered-lists">Ordered Lists</h3>
-
-<ol>
-  <li>Item one
-    <ol>
-      <li>sub item one</li>
-      <li>sub item two</li>
-      <li>sub item three</li>
-    </ol>
-  </li>
-  <li>Item two</li>
-</ol>
-
-<h3 id="unordered-lists">Unordered Lists</h3>
-
-<ul>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-</ul>
-
-<h2 id="tables">Tables</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Header1</th>
-      <th style="text-align: center">Header2</th>
-      <th style="text-align: right">Header3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">cell1</td>
-      <td style="text-align: center">cell2</td>
-      <td style="text-align: right">cell3</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">cell4</td>
-      <td style="text-align: center">cell5</td>
-      <td style="text-align: right">cell6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">cell7</td>
-      <td style="text-align: center">cell8</td>
-      <td style="text-align: right">cell9</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Kingdom</th>
-      <th style="text-align: center">Phylum</th>
-      <th style="text-align: center">Class</th>
-      <th style="text-align: center">Order</th>
-      <th style="text-align: center">Family</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">ANIMALIA</td>
-      <td style="text-align: center">CHORDATA</td>
-      <td style="text-align: center">MAMMALIA</td>
-      <td style="text-align: center">CETARTIODACTYLA</td>
-      <td style="text-align: center">CERVIDAE</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="code-snippets">Code Snippets</h2>
-
-<p>Syntax highlighting via Pygments</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css">#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
-}</code></pre></figure>
-
-<h4 id="highlight-with-line-number">highlight with line number.</h4>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">def foo
-  puts &#39;foo&#39;
-end</code></pre></figure>
-
-<h4 id="highlight-using-triple-backticks">highlight using triple backticks</h4>
-
-<pre><code class="language-r">a=1:10
-for(i in a)
-{
-  print(i)
-}
-
+port 30002
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+	
+port 30003
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
 
 </code></pre>
 
-<h2 id="latex"><script type="math/tex">\LaTeX</script></h2>
+<blockquote>
+  <p>执行如下命令来分别启动每个 Redis 实例：</p>
+</blockquote>
 
-<p>you can use latex with <q>double $$ </q></p>
+<pre><code>../src/redis-server redis.conf
+</code></pre>
 
-<script type="math/tex; mode=display">e^{i\pi}+1=0</script>
+<h2 id="section">创建集群</h2>
 
-<h2 id="q-tag">&lt;q&gt; tag</h2>
+<blockquote>
+  <p>现在我们已经有了三个正在运行中的 Redis 实例， 接下来我们需要使用这些实例来创建集群， 并为每个节点编写配置文件。通过使用 Redis 集群命令行工具 redis-trib ， 编写节点配置文件的工作可以非常容易地完成： redis-trib 位于 Redis 源码的 &gt;src 文件夹中， 它是一个 Ruby 程序， 这个程序通过向实例发送特殊命令来完成创建新集群， 检查集群， 或者对集群进行重新分片&gt;（reshared）等工作。</p>
+</blockquote>
 
-<p>here is a &lt;q&gt; q tag &lt;/q&gt;</p>
+<pre><code>./redis-trib.rb create 192.168.1.179:30001 192.168.1.179:30002 192.168.1.179:30003
 
-<p>here is a <q> q tag </q></p>
+</code></pre>
+
+<blockquote>
+  <p>执行结果如下,这表示集群中的 16384 个槽都有至少一个主节点在处理， 集群运作正常。</p>
+</blockquote>
+
+<pre><code>[root@192 src]# ./redis-trib.rb create 192.168.1.179:30001 192.168.1.179:30002 192.168.1.179:30003
+
+&gt;&gt;&gt; Creating cluster
+&gt;&gt;&gt; Performing hash slots allocation on 3 nodes...
+Using 3 masters:
+192.168.1.179:30001
+192.168.1.179:30002
+192.168.1.179:30003
+M: a87f3bd894a5d58fda2c7ba0fb0926e05c8ebf96 192.168.1.179:30001
+   slots:0-5460 (5461 slots) master
+M: 915039a399601973b5d5915f71d8c37f6caeeb45 192.168.1.179:30002
+   slots:5461-10922 (5462 slots) master
+M: c4628faf0aa4cf8d083733abd9e1c10225d7a731 192.168.1.179:30003
+   slots:10923-16383 (5461 slots) master
+Can I set the above configuration? (type 'yes' to accept): yes
+&gt;&gt;&gt; Nodes configuration updated
+&gt;&gt;&gt; Assign a different config epoch to each node
+&gt;&gt;&gt; Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join..
+&gt;&gt;&gt; Performing Cluster Check (using node 192.168.1.179:30001)
+M: a87f3bd894a5d58fda2c7ba0fb0926e05c8ebf96 192.168.1.179:30001
+   slots:0-5460 (5461 slots) master
+M: 915039a399601973b5d5915f71d8c37f6caeeb45 192.168.1.179:30002
+   slots:5461-10922 (5462 slots) master
+M: c4628faf0aa4cf8d083733abd9e1c10225d7a731 192.168.1.179:30003
+   slots:10923-16383 (5461 slots) master
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check for open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre>
+<blockquote>
+  <p>到此为止，Redis 最简配置的集群就搭建完成了。</p>
+</blockquote>
+
 
   </article>
   <hr />
@@ -306,10 +233,10 @@ for(i in a)
 <section class="pager">
   <ul>
     
-    <li class="previous"><a href="/elizhanght.github.io/articles/2013/10/10/milu.html" title="Père David's deer">&larr; 前一页</a></li>
+    <li class="previous"><a href="/elizhanght.github.io/articles/2016/09/19/spring_boot_first.html" title="Spring Boot First">&larr; 前一页</a></li>
     
     
-    <li class="next"><a href="/elizhanght.github.io/articles/2014/12/18/how-to-install.html" title="How to install this theme">后一页 &rarr;</a></li>
+    <li class="disabled"><a>后一页 &rarr;</a>
     
   </ul>
 </section>

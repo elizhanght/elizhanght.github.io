@@ -106,6 +106,136 @@
   
     <header class="post-header">
       <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/elizhanght.github.io/articles/2016/09/20/Redis-Cluster.html">Redis Cluster First</a>
+      </h1>
+      <meta itemprop="keywords" content="version,new features,google analytics,google search,back to top,read more" />
+      <p class="post-meta">
+      目录:
+      
+      <a href="/elizhanght.github.io/categories/#articles">articles</a>
+      
+      
+      | 标签:
+      
+      <a href="/elizhanght.github.io/tags/#version" title="version">version</a>, 
+      
+      <a href="/elizhanght.github.io/tags/#new features" title="new features">new features</a>, 
+      
+      <a href="/elizhanght.github.io/tags/#google analytics" title="google analytics">google analytics</a>, 
+      
+      <a href="/elizhanght.github.io/tags/#google search" title="google search">google search</a>, 
+      
+      <a href="/elizhanght.github.io/tags/#back to top" title="back to top">back to top</a>, 
+      
+      <a href="/elizhanght.github.io/tags/#read more" title="read more">read more</a>
+      
+      
+      <time itemprop="datePublished" datetime="2016-09-20">
+      | 发表时间: Sep 20, 2016
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <h2 id="redis-">Redis 集群搭建准备</h2>
+
+<blockquote>
+  <p>下面先搭建一个最简单的 3 个节点的集群，先不为主节点添加从节点，在稍后的文章中会添加从节点。至于Redis如何安装将在后面的文章补充上.</p>
+
+  <p>现在的假设我们有 3 个 A,B,C 节点，分别部署一个 Redis 节点。由于测试环境受限影响，现在把 3 个节点都部署到一台服务器上。新建 Redis-Cluster 目录，然后新建 3 个文件夹，分别是：</p>
+</blockquote>
+
+<pre><code>mkdir Redis-Cluster
+mkdir 30001 30002 30003
+</code></pre>
+
+<blockquote>
+  <p>然后在 30001 30002 30003 中分别生成 redis.conf 文件，文件内容分别如下。</p>
+</blockquote>
+
+<pre><code>port 30001
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+port 30002
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+	
+port 30003
+cluster-enabled yes
+cluster-config-file nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+
+</code></pre>
+
+<blockquote>
+  <p>执行如下命令来分别启动每个 Redis 实例：</p>
+</blockquote>
+
+<pre><code>../src/redis-server redis.conf
+</code></pre>
+
+<h2 id="section">创建集群</h2>
+
+<blockquote>
+  <p>现在我们已经有了三个正在运行中的 Redis 实例， 接下来我们需要使用这些实例来创建集群， 并为每个节点编写配置文件。通过使用 Redis 集群命令行工具 redis-trib ， 编写节点配置文件的工作可以非常容易地完成： redis-trib 位于 Redis 源码的 &gt;src 文件夹中， 它是一个 Ruby 程序， 这个程序通过向实例发送特殊命令来完成创建新集群， 检查集群， 或者对集群进行重新分片&gt;（reshared）等工作。</p>
+</blockquote>
+
+<pre><code>./redis-trib.rb create 192.168.1.179:30001 192.168.1.179:30002 192.168.1.179:30003
+
+</code></pre>
+
+<blockquote>
+  <p>执行结果如下,这表示集群中的 16384 个槽都有至少一个主节点在处理， 集群运作正常。</p>
+</blockquote>
+
+<pre><code>[root@192 src]# ./redis-trib.rb create 192.168.1.179:30001 192.168.1.179:30002 192.168.1.179:30003
+
+&gt;&gt;&gt; Creating cluster
+&gt;&gt;&gt; Performing hash slots allocation on 3 nodes...
+Using 3 masters:
+192.168.1.179:30001
+192.168.1.179:30002
+192.168.1.179:30003
+M: a87f3bd894a5d58fda2c7ba0fb0926e05c8ebf96 192.168.1.179:30001
+   slots:0-5460 (5461 slots) master
+M: 915039a399601973b5d5915f71d8c37f6caeeb45 192.168.1.179:30002
+   slots:5461-10922 (5462 slots) master
+M: c4628faf0aa4cf8d083733abd9e1c10225d7a731 192.168.1.179:30003
+   slots:10923-16383 (5461 slots) master
+Can I set the above configuration? (type 'yes' to accept): yes
+&gt;&gt;&gt; Nodes configuration updated
+&gt;&gt;&gt; Assign a different config epoch to each node
+&gt;&gt;&gt; Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join..
+&gt;&gt;&gt; Performing Cluster Check (using node 192.168.1.179:30001)
+M: a87f3bd894a5d58fda2c7ba0fb0926e05c8ebf96 192.168.1.179:30001
+   slots:0-5460 (5461 slots) master
+M: 915039a399601973b5d5915f71d8c37f6caeeb45 192.168.1.179:30002
+   slots:5461-10922 (5462 slots) master
+M: c4628faf0aa4cf8d083733abd9e1c10225d7a731 192.168.1.179:30003
+   slots:10923-16383 (5461 slots) master
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check for open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre>
+<blockquote>
+  <p>到此为止，Redis 最简配置的集群就搭建完成了。</p>
+</blockquote>
+
+
+    </article> <hr />
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
         <a itemprop="url" class="post-link" href="/elizhanght.github.io/articles/2016/09/19/spring_boot_first.html">Spring Boot First</a>
       </h1>
       <meta itemprop="keywords" content="version,new features,google analytics,google search,back to top,read more" />
@@ -863,6 +993,10 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   <h4>近期文章</h4>
   
   <li>
+  <a href="/elizhanght.github.io/articles/2016/09/20/Redis-Cluster.html" title="Redis Cluster First" rel="bookmark">Redis Cluster First</a>
+  </li>
+  
+  <li>
   <a href="/elizhanght.github.io/articles/2016/09/19/spring_boot_first.html" title="Spring Boot First" rel="bookmark">Spring Boot First</a>
   </li>
   
@@ -878,17 +1012,13 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   <a href="/elizhanght.github.io/articles/howto/2014/12/19/freshman21-structure.html" title="Theme structure" rel="bookmark">Theme structure</a>
   </li>
   
-  <li>
-  <a href="/elizhanght.github.io/articles/2014/12/18/how-to-install.html" title="How to install this theme" rel="bookmark">How to install this theme</a>
-  </li>
-  
 </div>
 
 
 <div class="sidebar-module">
   <h4>分类目录</h4>
   
-  <li><a href="/elizhanght.github.io/categories/#articles" title="articles" rel="6">articles (6)</a></li>
+  <li><a href="/elizhanght.github.io/categories/#articles" title="articles" rel="7">articles (7)</a></li>
   
   <li><a href="/elizhanght.github.io/categories/#Howto" title="Howto" rel="2">Howto (2)</a></li>
   
@@ -912,17 +1042,17 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   
     <a href="/elizhanght.github.io/tags/#configure" title="configure" rel="1">configure</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#version" title="version" rel="2">version</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#version" title="version" rel="3">version</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#new features" title="new features" rel="2">new features</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#new features" title="new features" rel="3">new features</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#google analytics" title="google analytics" rel="2">google analytics</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#google analytics" title="google analytics" rel="3">google analytics</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#google search" title="google search" rel="2">google search</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#google search" title="google search" rel="3">google search</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#back to top" title="back to top" rel="2">back to top</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#back to top" title="back to top" rel="3">back to top</a> &nbsp;
   
-    <a href="/elizhanght.github.io/tags/#read more" title="read more" rel="2">read more</a> &nbsp;
+    <a href="/elizhanght.github.io/tags/#read more" title="read more" rel="3">read more</a> &nbsp;
   
 </div>
 
@@ -946,6 +1076,9 @@ Based on genetic comparisons, Père David’s deer is closely related to the dee
   
   
   <li id="2016" > <a href="/elizhanght.github.io/archives/#2016">2016</a></li>
+  
+  
+  
   
   
   
