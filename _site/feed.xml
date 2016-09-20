@@ -5,8 +5,8 @@
     <description>Freshman21 is a Jekyll blog theme.</description>
     <link>http://houshuai.github.io/</link>
     <atom:link href="http://houshuai.github.io/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Sep 2016 11:31:00 +0800</pubDate>
-    <lastBuildDate>Tue, 20 Sep 2016 11:31:00 +0800</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2016 11:33:51 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2016 11:33:51 +0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;h2 id=&quot;section&quot;&gt;1. 基本信息&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;font size=&quot;2px&quot;&gt;Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。&lt;/font&gt;
+  &lt;p&gt;Spring Boot 是 spring 社区新增的项目，目的是加快项目的开发，下面将逐步开始介绍如何搭建一个 Spring Boot 工程。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;2. 新建项目&lt;/h2&gt;
