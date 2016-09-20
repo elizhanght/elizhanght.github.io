@@ -24,7 +24,9 @@ tags:
 	mkdir Redis-Cluster
 	mkdir 30001 30002 30003
 ```
+
 >	然后在 30001 30002 30003 中分别生成 redis.conf 文件，文件内容分别如下。
+
 
 ```
 	port 30001
@@ -48,6 +50,7 @@ tags:
 ```
 
 > 执行如下命令来分别启动每个 Redis 实例：
+
 ```
 	../src/redis-server redis.conf
 ```
