@@ -14,8 +14,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
-  font-size: 14px;
-  line-height: 1.6em;
+  font-size: 16px;
+  line-height: 1em;
   font-weight: 300;
   color: #111;
   background-color: #f9f9f9;
@@ -80,7 +80,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 12.25px; }
+  font-size: 14px; }
 
 /**
  * Lists
@@ -199,7 +199,7 @@ table {
   padding: 0;
   margin-bottom: 5px;
   border-collapse: collapse;
-  font-size: 12.25px; }
+  font-size: 14px; }
 
 table tr {
   border-top: 1px solid #cccccc;
@@ -274,7 +274,7 @@ cite {
     display: none; }
   .site-nav .page-link {
     color: #828282;
-    line-height: 1.6em;
+    line-height: 1em;
     margin-left: 10px;
     margin-right: 10px; }
   .site-nav a {
@@ -316,7 +316,7 @@ cite {
   margin: 0 -15px 15px;
   font-size: 14px; }
   .sidebar-module h4 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: #424242; }
   .sidebar-module li {
@@ -346,7 +346,7 @@ cite {
   font-size: 20px; }
 
 .post-meta {
-  font-size: 12.25px;
+  font-size: 14px;
   color: #828282; }
 
 .post-link {
