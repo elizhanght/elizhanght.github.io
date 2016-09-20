@@ -27,19 +27,19 @@ body {
 h1, h2, h3, h4,
 p, blockquote, pre,
 ul, ol, dl, figure {
-  margin-bottom: 7.5px; }
+  margin-bottom: 6px; }
 
 /**
  * Set main page style
  */
 .container {
   min-height: 100%;
-  max-width: -webkit-calc(1000px - (15px * 2));
-  max-width: calc(1000px - (15px * 2));
+  max-width: -webkit-calc(1024px - (12px * 2));
+  max-width: calc(1024px - (12px * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12px;
+  padding-left: 12px;
   padding-top: 30px;
   background-color: #fff;
   margin-top: 20px;
@@ -86,7 +86,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: 15px; }
+  margin-left: 12px; }
 
 li > ul,
 li > ol {
@@ -160,18 +160,18 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(960px - (15px * 2));
-  max-width: calc(960px - (15px * 2));
+  max-width: -webkit-calc(1024px - (12px * 2));
+  max-width: calc(1024px - (12px * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 12px;
+  padding-left: 12px; }
   @media screen and (max-width: 800px) {
     .wrapper {
-      max-width: -webkit-calc(960px - (15px));
-      max-width: calc(960px - (15px));
-      padding-right: 7.5px;
-      padding-left: 7.5px; } }
+      max-width: -webkit-calc(1024px - (12px));
+      max-width: calc(1024px - (12px));
+      padding-right: 6px;
+      padding-left: 6px; } }
 
 /**
  * Clearfix
@@ -330,15 +330,15 @@ cite {
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e8e8e8;
-  margin: 15px 0;
-  padding: 15px 0;
+  margin: 12px 0;
+  padding: 12px 0;
   font-size: 14px; }
 
 /**
  * Page content
  */
 .page-content {
-  padding: 15px 0; }
+  padding: 12px 0; }
   .page-content strong {
     font-weight: bold; }
 
@@ -357,7 +357,7 @@ cite {
  * Posts
  */
 .post-header {
-  margin-bottom: 15px; }
+  margin-bottom: 12px; }
   .post-header time {
     margin-left: 0px;
     font-style: normal; }
@@ -389,7 +389,7 @@ cite {
   font-size: 18px; }
 
 .post-content p {
-  padding: 3px 0; }
+  padding: 2.4px 0; }
 .post-content h1 {
   font-size: 38px;
   line-height: 1em; }
