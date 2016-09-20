@@ -207,7 +207,7 @@
   padding-left:10px;
   border-bottom:5px solid $grey-color-light !important;
   display:block;
-  font-size:18px
+  font-size:14px
 }
 
 
@@ -245,7 +245,7 @@
     line-height:1em;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
 }

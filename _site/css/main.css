@@ -129,7 +129,7 @@ blockquote {
   border: 2px dashed #d0dfda;
   border-radius: 5px;
   color: #828282;
-  font-size: 18px;
+  font-size: 14px;
   background: #f9f9f9; }
   blockquote:hover {
     color: #454545; }
@@ -140,10 +140,10 @@ blockquote {
  * Code formatting
  */
 pre, code {
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 3px;
-  background-color: #29281e;
-  color: #eee; }
+  background-color: #EEE5DE;
+  color: #000000; }
 
 code {
   padding: 1px 5px; }
@@ -386,7 +386,7 @@ cite {
   padding-left: 10px;
   border-bottom: 5px solid #e8e8e8 !important;
   display: block;
-  font-size: 18px; }
+  font-size: 14px; }
 
 .post-content p {
   padding: 2.4px 0; }
@@ -413,7 +413,7 @@ cite {
   line-height: 1em; }
   @media screen and (max-width: 800px) {
     .post-content h4 {
-      font-size: 18px; } }
+      font-size: 14px; } }
 
 /**
  * Pagination Style

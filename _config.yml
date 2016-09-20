@@ -56,10 +56,10 @@ Blogroll:
 
 ### Build settings
 markdown: kramdown
-highlighter: highlight#pygments
+highlighter: feiendly
 kramdown:
         input: GFM
-        syntax_highlighter: rouge
+        syntax_highlighter: feiendly
 gems: [jekyll-paginate]
 paginate: 10
 excerpt_separator: <!-- more -->
