@@ -4,14 +4,6 @@ title: Keepalived 参数配置
 layout: post
 author: Eli ZHANG 
 category: articles
-tags:
-- version
-- new features
-- google analytics
-- google search
-- back to top
-- read more
-
 ---
 
 Keepalived 参数配置
@@ -24,10 +16,3 @@ Keepalived 参数配置
    priority    | keepalived 实例优先级，值越大优先级越高
    advert int  | 检查的时间间隔
 
-```
-state		-- keepalived 实例的初始状态
-interface	-- keepalived 实例绑定的网卡
-priority	-- keepalived 实例优先级，值越大优先级越高
-advert int	-- 检查的时间间隔
-
-```
