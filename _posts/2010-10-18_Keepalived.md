@@ -1,3 +1,19 @@
+---
+published: true
+title: Keepalived 参数配置
+layout: post
+author: Eli ZHANG 
+category: articles
+tags:
+- version
+- new features
+- google analytics
+- google search
+- back to top
+- read more
+
+---
+
 Keepalived 参数配置
 -----------------
 
