@@ -46,8 +46,17 @@ Once the libraries are properly installed and available to Java (if loading fail
 > 接下来启动 Tomcat 来检查是否配置成功
 ```
 十一月 13, 2016 11:36:28 上午 org.apache.coyote.AbstractProtocol start
-信息: Starting ProtocolHandler ["http-apr-8080"] </br>
+信息: Starting ProtocolHandler ["http-apr-8080"] 
 十一月 13, 2016 11:36:29 上午 org.apache.coyote.AbstractProtocol start
 信息: Starting ProtocolHandler ["ajp-apr-8009"]
 十一月 13, 2016 11:36:29 上午 org.apache.catalina.startup.Catalina start
+```
+
+> 下面是 tomcat 线程池参数说明
+
+```
+maxThreads			最大并发数
+minSpareThreads		初始化时创建的线程数
+maxSpareThreads		一旦创建的线程超过这个值，Tomcat就会关闭不再需要的线程
+acceptCount			指定当所有可以使用的处理请求的线程数都被使用时，可以放到处理队列中的请求数，超过这个数的请求将不予处理
 ```
