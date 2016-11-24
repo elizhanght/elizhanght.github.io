@@ -1,3 +1,11 @@
+---
+published: true
+title: Redis-Sentinel 配置
+layout: post
+author: Eli ZHANG 
+category: articles
+
+---
 ##Redis-Sentinel配置
 
 >Redis配置过程如下，安装过程省略。首先配置 sentinel.conf 文件，内容如下。具体环境是一主一从。主从的配置参见上一篇文章.
