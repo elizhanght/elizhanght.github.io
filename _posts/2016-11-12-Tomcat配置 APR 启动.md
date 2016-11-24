@@ -1,4 +1,13 @@
-###Tomcat7 配置 APR 模式启动
+---
+published: true
+title: Tomcat APR 配置
+layout: post
+author: Eli ZHANG 
+category: articles
+
+---
+
+##Tomcat7 配置 APR 模式启动
 
 >具体的配置环境为 Centos7、JDK1.7、Tomcat8。要为tomcat配置 APR 启动模式需要如下系统配置。
 
